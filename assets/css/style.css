@@ -1,0 +1,291 @@
+:root{
+    --black-1: #1D242E;
+    --black-2: #283342;
+    --red: #F0483E;
+    --green: #2ED47A;
+    --sky-blue: #03A9F5;
+    --yellow: #FED600;
+    --white: #FFFFFF;
+    --off-white: #d7e7ea;
+    --teal-green: #009099;
+}
+
+body{
+    padding-left: 16rem;
+    transition: padding-left .4s ease-in-out;
+    scrollbar-color: var(--sky-blue) transparent; /* Thumb color and track color */
+    scrollbar-width: auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+body.active{
+    padding-left: 0;
+}
+section{
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+
+
+
+/* ==================== Header Start ==========================*/
+.header{
+    position: sticky;
+    top: 0;
+    left:0; right: 0;
+    z-index: 100;
+    background-color: #F7FAFD;
+}
+.header .header-flex{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .header-flex .date-time{
+    height: 40px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+header .header-flex .date-time .date{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header .header-flex .logoutBtn{
+    outline: 0;
+    border: 0;
+    background: transparent;
+    color: var(--red);
+    transition: all .5s ease;
+}
+.header .header-flex .logoutBtn:hover{
+    transform: scale(1.1);
+}
+header .header-flex .date-time .date p{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--black-1);
+}
+header .header-flex .date-time .time{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header .header-flex .date-time .time p{
+    font-size: 12px;
+    color: var(--black-2);
+    opacity: 80%;
+}
+.header .header-flex .open-close-menu{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--off-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease;
+}
+.header .header-flex .open-close-menu:hover{
+    background-color: var(--black-1);
+}
+.header .header-flex .open-close-menu:hover span{
+    color: var(--white);
+}
+.header .header-flex .open-close-menu span{
+    font-size: 25px;
+    color: var(--black-2);
+}
+
+/* ==================== Header Ends ==========================*/
+
+
+
+
+
+/* ==================== Side Bar Start ==========================*/
+.side-bar{
+    position: fixed;
+    top: 0; left: 0;
+    width: 256px;
+    background-color: var(--black-2);
+    height: 100vh;
+    z-index: 200;
+    transition: left .4s ease-in-out;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+.side-bar.active{
+    left: -16rem;
+}
+.side-bar .side-bar-head{
+    width: 100%;
+    height: fit-content;
+    padding: .8rem 0;
+    background-color: var(--black-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.side-bar .side-bar-head .info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+}
+.side-bar .side-bar-head .info .logo{
+    height: 42px;
+    width: 42px;
+}
+.side-bar .side-bar-head .info .logo span{
+    font-size: 1.7rem;
+}
+.side-bar .side-bar-head .info .name p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+
+.side-bar .side-bar-menu{
+    width: 100%;
+    max-height: calc(100vh - 95px);
+    padding: 0 17px;
+    margin-top: 20px;
+}
+.side-bar .side-bar-menu .menu-items{
+
+}
+.side-bar .side-bar-menu .menu-items ul{
+    margin: 0;
+    padding: 0;
+}
+.side-bar .side-bar-menu .menu-items ul li{
+    list-style: none;
+    width: 100%;
+}
+.side-bar .side-bar-menu .menu-items ul li a{
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    border-bottom: 1px solid var(--white);
+    margin-bottom: 15px;
+    transition: all .5s ease;
+}
+
+.side-bar .side-bar-menu .menu-items ul li a.activeLink{
+    background-color: var(--black-1);
+    border-left: 4px solid var(--red);
+}
+.side-bar .side-bar-menu .menu-items ul li a:hover{
+    background-color: var(--black-1);
+}
+.side-bar .side-bar-menu .menu-items ul li a span{
+    font-size: 1.4rem;
+}
+
+
+
+.side-bar .side-bar-footer{
+    height: 35px;
+    width: 100%;
+    padding: 0 17px;
+    background-color: var(--black-1);
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: auto;
+}
+.side-bar .side-bar-footer .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.side-bar .side-bar-footer .info p{
+    font-size: 11px;
+}
+/* ==================== Side Bar Ends ==========================*/
+
+
+
+
+
+
+.date-time{
+    height: 40px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.date-time .date{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.date-time .date .color{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--yellow);
+}
+.date-time .date p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black-1);
+}
+.date-time .time{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.date-time .time p{
+    font-size: 14px;
+    color: var(--black-2);
+    opacity: 80%;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 992px) {
+    body{
+        padding-left: 0;
+    }
+    .side-bar{
+        left: -16rem;
+        transition: .4s linear;
+    }
+    .side-bar.active{
+        left: 0;
+        border-right: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 576px) {
+
+}
