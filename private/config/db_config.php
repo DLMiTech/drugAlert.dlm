@@ -1,6 +1,6 @@
 <?php
 /** database config **/
-const DB_HOST = "localhost";
+const DB_HOST = "localhost:3306";
 
 if($_SERVER['SERVER_NAME'] == 'localhost')
 {
